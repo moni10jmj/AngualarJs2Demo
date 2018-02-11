@@ -1,0 +1,78 @@
+/* General styles for all menus */
+.cbp-spmenu{ float:right;}
+.cbp-spmenu h3{display:none;}
+.cbp-spmenu ul{list-style:none; margin:0px; padding:0px;}
+.cbp-spmenu ul li{float:left; margin-left: 20px; padding:30px 12px;}
+.cbp-spmenu ul li:last-child{background:#fac700; color:#695f36 !important; font:normal 16px Poppins_regular; border-radius:10px; margin: 20px 0 0 20px; padding:10px;}
+.cbp-spmenu ul li a{color:#2c2d33; font:normal 16px Poppins_regular; display:block; border-bottom:2px solid #fff0;}
+.cbp-spmenu ul li a:hover{color:#41b1e2; text-decoration:none; border-bottom:2px solid #41b1e2;}
+.loginCls > a{border-bottom:0px !important;}
+.loginCls > a:hover{color:#fff !important;}
+.main{display:none;}
+.linkMobCls{display:none;}
+
+@media only screen and (max-width:1300px){
+	.cbp-spmenu ul li{padding: 30px 6px;}
+	.cbp-spmenu ul li:last-child{margin: 20px 0 0 10px;}
+}
+
+@media only screen and (max-width:990px){
+	.linkMobCls{display:block;}
+	.buttonset{margin:0px;}
+	.main button{margin:0px !important; border:0px;}
+	.main button:hover{background:none;}
+	.loginCls{}
+	.cbp-spmenu ul li:last-child{background:none; color:none; font: normal 16px Poppins_regular; border-radius:0px; margin:0; padding:0;}
+	.cbp-spmenu ul li {padding:10px 6px;}
+	.main{display:block; left:15px; position:absolute; top:-55px;}
+	.cbp-spmenu h3{display:block;}
+	.cbp-spmenu{background:#48bef2; position:fixed;}
+	.cbp-spmenu h3{color:#afdefa; font:normal  1.9em Poppins_regular; padding:20px; margin:0; font-weight:300; background:#223072;}
+	.cbp-spmenu ul li{width:100%; margin-left:0px;}
+	.cbp-spmenu ul li:last-child{padding: 10px 6px;}
+	.cbp-spmenu ul li a{display:block; color:#fff;}
+	.cbp-spmenu a:hover{background:#258ecd;}
+	.cbp-spmenu a:active{background:#afdefa; color:#47a3da;}
+
+	/* Orientation-dependent styles for the content of the menu */
+	.cbp-spmenu-vertical{width:240px; height:100%; top:0; z-index:1000;}
+	.cbp-spmenu-vertical ul li{border-bottom:1px solid #7dcbec;}
+	.cbp-spmenu-vertical ul li a{padding:10px 15px;}
+	.cbp-spmenu-horizontal{width:100%; height:150px; left:0; z-index:1000; overflow:hidden;}
+	.cbp-spmenu-horizontal h3{height:100%; width:20%; float:left;}
+	.cbp-spmenu-horizontal a{float:left; width:20%; padding:0.8em; border-left:1px solid #258ecd;}
+
+	/* Vertical menu that slides from the left or right */
+	.cbp-spmenu-left{left:-240px;}
+	.cbp-spmenu-right{right:-240px;}
+	.cbp-spmenu-left.cbp-spmenu-open{left:0px;}
+	.cbp-spmenu-right.cbp-spmenu-open{right:0px;}
+
+	/* Horizontal menu that slides from the top or bottom */
+	.cbp-spmenu-top{top:-150px;}
+	.cbp-spmenu-bottom{bottom:-150px;}
+	.cbp-spmenu-top.cbp-spmenu-open{top:0px;}
+	.cbp-spmenu-bottom.cbp-spmenu-open{bottom:0px;}
+
+	/* Push classes applied to the body */
+	.cbp-spmenu-push{overflow-x:hidden; position:relative; left:0;}
+	.cbp-spmenu-push-toright{left:240px;}
+	.cbp-spmenu-push-toleft{left:-240px;}
+
+	/* Transitions */
+	.cbp-spmenu, .cbp-spmenu-push{-webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; transition:all 0.3s ease;}
+}
+
+/* Example media queries */
+@media screen and (max-width: 55.1875em){
+	.cbp-spmenu-horizontal{font-size:75%; height:110px;}
+	.cbp-spmenu-top {top:-110px;}
+	.cbp-spmenu-bottom {bottom: -110px;}
+}
+
+@media screen and (max-height: 26.375em){
+	.cbp-spmenu-vertical{font-size:90%; width:190px;}
+	.cbp-spmenu-left,.cbp-spmenu-push-toleft{left:-190px;}
+	.cbp-spmenu-right{right:-190px;}
+	.cbp-spmenu-push-toright{left:190px;}
+}
